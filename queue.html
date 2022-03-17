@@ -49,7 +49,7 @@
 </body>
 
 <script>
-    function makeNewDiv() {
+     function makeNewDiv() {
         /* make the div and its text */
         let element = document.createElement("div")
         element.innerHTML = document.getElementById("form_text").value;
@@ -82,6 +82,23 @@
             }
         }
     }
+
+    function unique() {
+        queueItems = document.getElementsByClassName('queue');
+        var len = queueItems.length
+        for (let i = 0; i < len; i++) {
+            for (let j = i + 1; j < len - 1; j++) {
+                if (queueItems[i].innerHTML == queueItems[j].innerHTML) {
+                    queueItems[j].remove();
+                    
+                }
+            }
+        }
+
+
+
+    }
+
 
     
 
